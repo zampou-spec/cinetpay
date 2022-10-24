@@ -1,0 +1,39 @@
+{
+    "name": "zampou/cinetpay",
+    "description": "CinetPay laravel package",
+    "keywords": [
+        "cinetpay",
+        "integration",
+        "mobile",
+        "money",
+        "laravel"
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Zampou\\Cinetpay\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Zampou\\Cinetpay\\Providers\\CinetPayProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Zampou Ibrahim",
+            "email": "zampou.ibrahim59@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/zampou-spec/cinetpay"
+        }
+    ]
+}
