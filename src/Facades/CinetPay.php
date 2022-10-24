@@ -5,7 +5,7 @@ namespace Zampou\CinetPay\Facades;
 use Illuminate\Support\Facades\Facade;
 use Zampou\CinetPay\Providers\CinetPayProvider;
 
-class Coinpayments extends Facade
+class CinetPay extends Facade
 {
     /**
      * Get the registered name of the component.

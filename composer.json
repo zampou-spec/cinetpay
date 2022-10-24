@@ -11,14 +11,17 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Zampou\\Cinetpay\\": "src/"
+            "Zampou\\CinetPay\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Zampou\\Cinetpay\\Providers\\CinetPayProvider"
-            ]
+                "Zampou\\CinetPay\\Providers\\CinetPayProvider"
+            ],
+            "aliases": {
+                "CinetPay": "Zampou\\CinetPay\\Facades\\CinetPay"
+            }
         }
     },
     "authors": [

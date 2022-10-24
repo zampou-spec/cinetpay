@@ -25,7 +25,7 @@ CINETPAY_SITE_ID=votre_site_id
 CINETPAY_API_KEY=votre_cle_api
 ```
 
-*Exécutez `php artisan vendor:publish --provider="Zampou\CinetPay\CinetPayProvider" --tag="config"` pour le fichier de configuration complet.*
+*Exécutez `php artisan vendor:publish --provider="Zampou\CinetPay\Providers\CinetPayProvider" --tag="cinetpay"` pour le fichier de configuration complet.*
 
 Config : `config/cinetpay.php`
 
