@@ -7,7 +7,7 @@ use Zampou\CinetPay\Events\CinetPayIPN;
 
 class CinetPayController
 {
-  public function __invoke(Request $request)
+  public function index(Request $request)
   {
     if ($request->isMethod('get')) {
       return response('ok');
