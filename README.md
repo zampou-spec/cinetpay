@@ -1,12 +1,12 @@
 # Laravel CinetPay #
 
-### Instalation
+### Installation
 
 ```text
 composer require zampou/cinetpay
 ```
 
-### 1. Instalation du Service Provider
+### 1. Installation du Service Provider
 Tous les fournisseurs de services sont enregistrés dans le fichier de configuration suivant `config/app.php`.
 ```php
 'providers' => [
@@ -38,7 +38,7 @@ return [
 
 
 ### 3. IPN et CSRF Token
-Desactiver la verification CSRF sur la route ipn de CinetPay, tout route exclut sont le fichier suivant `app/Http/Middleware/VerifyCsrfToken.php`.
+Désactiver la vérification CSRF sur la route ipn de CinetPay, toutes les routes excluent sont dans le fichier suivant `app/Http/Middleware/VerifyCsrfToken.php`.
 
 ```php
     /**
@@ -65,7 +65,7 @@ $transactionLink = CinetPay::generatePaymentLink([
     'customer_name' => 'John',
     'customer_surname' => 'Doe',
     'transaction_id' => '123456789',
-    'description' => 'Bon gbozo bien chaud de qualité',
+    'description' => 'Bon gbozon bien chaud de qualité',
 ]);
 
 dd($transactionLink);
@@ -75,7 +75,7 @@ dd($transactionLink);
 #### validation IPN
 
 Laravel CinetPay peut gérer automatiquement les IPN pour vous :
-Il suffit simplement s'abonner à l'événement ` Zampou\CinetPay\Events\CinetPayIPN` en creant en Listener avec la commande suivant :
+Il suffit simplement à s'abonner à l'événement` Zampou\CinetPay\Events\CinetPayIPN` en creant en Listener avec la commande suivant :
 
 ```text
 php artisan make:listener CinetPayIPNListener
@@ -128,7 +128,7 @@ class CinetPayIpnListener
     public function handle($event)
     {
         // Vous faite votre traitement ici
-        // Structure des donners dans la variable `payment_data`
+        // Structure des données dans la variable `payment_data`
         // [
         //     'code',
         //     'message',
