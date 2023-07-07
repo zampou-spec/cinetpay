@@ -19,11 +19,11 @@ class CinetPayIPN
     if ($request->cpm_trans_id) {
       try {
         $site_id = $request->cpm_site_id;
-        $transaction_id = $request->cpm_trans_id;
         $apikey = config('cinetpay.CINETPAY_API_KEY');
+        $this->transaction_id = $request->cpm_trans_id;
 
         $cinetPay = new CinetPay($site_id, $apikey);
-        $this->paymentdata = $cinetPay->getPayStatus($transaction_id, $site_id);
+        $this->payment_data = $cinetPay->getPayStatus($this->transaction_id, $site_id);
       } catch (Exception $e) {
         throw new Exception("Erreur :" . $e->getMessage());
       }
