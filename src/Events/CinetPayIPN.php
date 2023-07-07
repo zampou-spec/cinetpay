@@ -12,13 +12,16 @@ class CinetPayIPN
 {
   use Dispatchable, SerializesModels;
 
+  public $data = null;
   public $payment_data = null;
+  public $transaction_id = null;
 
   public function __construct(Request $request)
   {
     if ($request->cpm_trans_id) {
       try {
         $site_id = $request->cpm_site_id;
+        $this->data = $request->all();
         $apikey = config('cinetpay.CINETPAY_API_KEY');
         $this->transaction_id = $request->cpm_trans_id;
 
